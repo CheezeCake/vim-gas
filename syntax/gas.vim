@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:     GNU as (AT&T) assembler for X86
 " Maintainer:   Rene Koecher <shirk@bitspin.org>
-" Last Change:  2013 Aug 15
-" Version:      0.9
+" Last Change:  2009 Dec 29
+" Version:      0.9.1
 " Remark:       Intel compatible instructions only (for now)
 " License:      BSD (3 clause), see LICENSE
-"
+" Modified by CheezeCake
 
 if version < 600
 	syntax clear
@@ -40,7 +40,7 @@ syn keyword gasDirective	.vtable_entry .vtable_inherit .warning .weak .weakref
 syn keyword gasDirectiveStore	.byte .hword .word .int .long .double .short .float
 syn keyword gasDirectiveStore	.string .string8 .string16 .ascii .asciz .comm
 
-syn keyword gasDirectiveMacro	.altmacro .macro .noaltmacro .end .func .endfunc
+syn keyword gasDirectiveMacro	.altmacro .macro .noaltmacro .end .func .endfunc .endm .endmacro
 
 " i*86 directives
 syn keyword gasDirectiveX86	.att_syntax .intel_syntax .att_mnemonic .intel_mnemonic .lcomm
@@ -524,8 +524,8 @@ syn keyword gasOpcode_8086_Base		cwd
 syn keyword gasOpcode_386_Base		cwde
 syn keyword gasOpcode_8086_Base		daa
 syn keyword gasOpcode_8086_Base		das
-syn keyword gasOpcode_X64_Base		dec
-syn keyword gasOpcode_X64_Base		div
+syn keyword gasOpcode_X64_Base		dec decb decw decl decq
+syn keyword gasOpcode_X64_Base		div divb divw divl divq
 syn keyword gasOpcode_P6_Base		dmint
 syn keyword gasOpcode_PENT_MMX		emms
 syn keyword gasOpcode_186_Base		enter enterb enterw enterl enterq
@@ -576,7 +576,7 @@ syn keyword gasOpcode_8086_Base		fistp fistpb fistpw fistpl fistpq
 syn keyword gasOpcode_PRESCOTT_Base	fisttp fisttpb fisttpw fisttpl fisttpq
 syn keyword gasOpcode_8086_Base		fisub fisubb fisubw fisubl fisubq
 syn keyword gasOpcode_8086_Base		fisubr fisubrb fisubrw fisubrl fisubrq
-syn keyword gasOpcode_8086_Base		fld
+syn keyword gasOpcode_8086_Base		fld flds fldl fldt
 syn keyword gasOpcode_8086_Base		fld1
 syn keyword gasOpcode_8086_Base		fldcw fldcwb fldcww fldcwl fldcwq
 syn keyword gasOpcode_8086_Base		fldenv fldenvb fldenvw fldenvl fldenvq
@@ -609,7 +609,8 @@ syn keyword gasOpcode_286_Base		fsetpm
 syn keyword gasOpcode_386_Base		fsin
 syn keyword gasOpcode_386_Base		fsincos
 syn keyword gasOpcode_8086_Base		fsqrt
-syn keyword gasOpcode_8086_Base		fst
+syn keyword gasOpcode_8086_Base		fst fsts fstl fstt
+syn keyword gasOpcode_8086_Base		fstp fstps fstpl fstpt
 syn keyword gasOpcode_8086_Base		fstcw fstcwb fstcww fstcwl fstcwq
 syn keyword gasOpcode_8086_Base		fstenv fstenvb fstenvw fstenvl fstenvq
 syn keyword gasOpcode_8086_Base		fstp
@@ -698,7 +699,7 @@ syn keyword gasOpcode_X64_Base		movsx
 syn keyword gasOpcode_X64_Base		movsxd
 syn keyword gasOpcode_X64_Base		movsx
 syn keyword gasOpcode_X64_Base		movzx
-syn keyword gasOpcode_X64_Base		mul
+syn keyword gasOpcode_X64_Base		mul mulb mulw mull mulq
 syn keyword gasOpcode_PRESCOTT_Base	mwait
 syn keyword gasOpcode_X64_Base		neg
 syn keyword gasOpcode_X64_Base		nop
@@ -809,6 +810,7 @@ syn keyword gasOpcode_PENT_Base		rdmsr
 syn keyword gasOpcode_P6_Base		rdpmc
 syn keyword gasOpcode_PENT_Base		rdtsc
 syn keyword gasOpcode_X86_64_Base		rdtscp
+syn keyword gasOpcode_8086_Base		rep repe repne repz repnz
 syn keyword gasOpcode_8086_Base		ret retb retw retl retq
 syn keyword gasOpcode_8086_Base		retf retfb retfw retfl retfq
 syn keyword gasOpcode_8086_Base		retn retnb retnw retnl retnq
