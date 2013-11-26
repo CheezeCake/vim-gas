@@ -104,9 +104,9 @@ Add this line to the end of your file:
 - Install [Vundle](https://github.com/gmarik/vundle)
 - Add the following to your `~/.vimrc`:
 
-````vim
-Bundle 'CheezeCake/vim-gas'
-```
+		````vim
+		Bundle 'CheezeCake/vim-gas'
+		```
 
 - Launch `vim`, run `:BundleInstall`
 
