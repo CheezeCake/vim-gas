@@ -99,7 +99,19 @@ Add this line to the end of your file:
 */ 
 ```
 
-## Installation with Git & Pathogen
+## With Vundle
+
+- Install [Vundle](https://github.com/gmarik/vundle)
+- Add the following to your `~/.vimrc`:
+
+````vim
+Bundle 'CheezeCake/vim-gas'
+```
+
+- Launch `vim`, run `:BundleInstall`
+
+
+### With Pathogen
 
 - Install [pathogen](http://www.vim.org/scripts/script.php?script_id=2332) into `~/.vim/autoload/` and add the
    following line to your `~/.vimrc`:
@@ -110,11 +122,11 @@ Add this line to the end of your file:
 
         $ mkdir -p ~/.vim/bundle
         $ cd ~/.vim/bundle
-        $ git clone https://github.com/Shirk/vim-gas
+        $ git clone https://github.com/CheezeCake/vim-gas
 
 - OR use git submodules:
 
-        $ git submodule add https://github.com/Shirk/vim-gas.git bundle/vim-gas
+        $ git submodule add https://github.com/CheezeCake/vim-gas.git bundle/vim-gas
         $ git submodule init
 
 ## License ##
