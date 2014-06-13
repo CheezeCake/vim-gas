@@ -34,7 +34,7 @@ syn keyword gasDirective	.local .mri .nolist .octa .org .p2alignw .p2alignl
 syn keyword gasDirective	.popsection .previous .print .protected .psize .purgem .pushsection .quad
 syn keyword gasDirective	.reloc .rept .sbttl .scl .section .set .single .size .skip .sleb128
 syn keyword gasDirective	.space .stabd .stabn .stabs .struct .subsection
-syn keyword gasDirective	.symver .tag .text .title .type .uleb128 .val .version
+syn keyword gasDirective	.symver .tag .text .title .type .uleb128 .val .version .code32 .code16
 syn keyword gasDirective	.vtable_entry .vtable_inherit .warning .weak .weakref
 
 syn keyword gasDirectiveStore	.byte .hword .word .int .long .double .short .float
