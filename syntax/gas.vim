@@ -800,6 +800,7 @@ syn keyword gasOpcode_386_Base		pushal
 syn keyword gasOpcode_186_Base		pushaw
 syn keyword gasOpcode_8086_Base		pushf
 syn keyword gasOpcode_386_Base		pushfd
+syn keyword gasOpcode_386_Base		pushfl
 syn keyword gasOpcode_X64_Base		pushfq
 syn keyword gasOpcode_8086_Base		pushfw
 syn keyword gasOpcode_PENT_MMX		pxor pxorb pxorw pxorl pxorq
